@@ -5,13 +5,14 @@ public class Stack{
     int top;
     public Stack(int stackSize) {
         this.a = new int[stackSize];
-        this.top = -1;
+        this.top = -1; //has to be -1, 0 doesn't wort bc arrays start at 0. Top keeps track of pushes
     }
 
     public boolean isFull() {return (a.length-1 == top);}
 
     public boolean isEmpty() {return (top == -1);}
 
+    //increment top and a[top] is value
     public int push(int value) {
         if (isFull()) { return -1; }
         top++;
@@ -19,6 +20,7 @@ public class Stack{
         return 0;
     }
 
+    //tmp = top and reduced top by 1
     public int pop() {
         if(isEmpty()) { return -1; }
         int temp = a[top];
@@ -36,13 +38,16 @@ class ExtendedStack extends Stack {
 
     public ExtendedStack(int stackSize, int wert) {
         super(stackSize);
+        //to fill full stack with numbers, use push mehtod bc less words to type
         for (int i = 0; i < stackSize; i++) {
             push(wert+i);
         }
     }
 
-    public boolean trueEmpty() { return isEmpty(); } //komplett Lost die Aufgabenstellung
+    public boolean trueEmpty() { return isEmpty(); } //see isEmpty method lol
 
+    //a.lenght-(top+1) is available space (bc top keeps track of how many "entrys" there are
+    //for loop to iterate through array and use push mehtod bc less words to type
     public int push(int[] arr) {
         if (arr.length > a.length-(top+1)) { return -1; }
         for (int j = 0; j < arr.length; j++) {

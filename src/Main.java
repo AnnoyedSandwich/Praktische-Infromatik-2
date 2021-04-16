@@ -10,6 +10,7 @@ public class Main {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("pls enter stack size");
+        //initalize size of array (stack) switch between size inout done by user (aufgabe 1.1) or not
         int stackSize;
         // stackSize = Integer.parseInt(in.readLine());
         stackSize = 6;
@@ -30,6 +31,8 @@ public class Main {
                 }
                 case 2 -> System.out.println(stack.pop());
                 case 3 -> {
+                    //str array splits out the commas, for loop to make int array out of stirng array
+                    //to-do: find smarter way without for loop
                     System.out.println("pls enter array numbers separated by ',' ");
                     String str = in.readLine();
                     String[] strArr = str.split(",");

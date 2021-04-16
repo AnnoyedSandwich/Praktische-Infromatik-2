@@ -9,7 +9,7 @@ public class Main {
 
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("pls enter stack size, hure");
+        System.out.println("pls enter stack size");
         int stackSize;
         // stackSize = Integer.parseInt(in.readLine());
         stackSize = 6;

@@ -10,7 +10,7 @@ public class Main {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("pls enter stack size");
-        //initalize size of array (stack) switch between size inout done by user (aufgabe 1.1) or not
+        //initalize size of array (stack) switch between size input done by user (Aufgabe 1.1) or not
         int stackSize;
         // stackSize = Integer.parseInt(in.readLine());
         stackSize = 6;

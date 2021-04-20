@@ -1,11 +1,19 @@
 import java.util.Arrays;
 
 public class Stack{
-    int [] a;
-    int top;
+    private int [] a;
+    private int top;
     public Stack(int stackSize) {
         this.a = new int[stackSize];
         this.top = -1; //has to be -1, 0 doesn't wort bc arrays start at 0. Top keeps track of pushes
+    }
+
+    public int[] getA() {
+        return a;
+    }
+
+    public int getTop() {
+        return top;
     }
 
     public boolean isFull() {return (a.length-1 == top);}
@@ -49,9 +57,9 @@ class ExtendedStack extends Stack {
     //a.lenght-(top+1) is available space (bc top keeps track of how many "entrys" there are
     //for loop to iterate through array and use push mehtod bc less words to type
     public int push(int[] arr) {
-        if (arr.length > a.length-(top+1)) { return -1; }
-        for (int j = 0; j < arr.length; j++) {
-            push(arr[j]);
+        if (arr.length > this.getA().length-(getTop()+1)) { return -1; }
+        for (int i : arr) {
+            push(i);
         }
         return 0;
     }

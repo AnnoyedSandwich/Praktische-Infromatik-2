@@ -8,6 +8,7 @@ public class Stack{
         this.top = -1; //has to be -1, 0 doesn't wort bc arrays start at 0. Top keeps track of pushes
     }
 
+    //getter methods
     public int[] getA() {
         return a;
     }

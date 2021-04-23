@@ -2,7 +2,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-@SuppressWarnings("SpellCheckingInspection")
 public class Main {
         public static void main(String[] args)
             throws IOException
@@ -11,7 +10,7 @@ public class Main {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("pls enter stack size");
-        //initialise size of array (stack) switch between size input done by user (Aufgabe 1.1) or not
+        //initalize size of array (stack) switch between size input done by user (Aufgabe 1.1) or not
         int stackSize;
         // stackSize = Integer.parseInt(in.readLine());
         stackSize = 6;
@@ -32,7 +31,7 @@ public class Main {
                 }
                 case 2 -> System.out.println(stack.pop());
                 case 3 -> {
-                    //str array splits out the commas, for loop to make int array out of string array
+                    //str array splits out the commas, for loop to make int array out of stirng array
                     //to-do: find smarter way without for loop
                     System.out.println("pls enter array numbers separated by ',' ");
                     String str = in.readLine();

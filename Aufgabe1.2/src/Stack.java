@@ -64,4 +64,13 @@ class ExtendedStack extends Stack {
         }
         return 0;
     }
+
+    public int pop(int number) {
+        if (number > this.getTop()+1) return -1;
+        int tmp = 0;
+        for (int i = 0; i < number; i++) {
+            tmp = pop();
+        }
+        return tmp;
+    }
 }

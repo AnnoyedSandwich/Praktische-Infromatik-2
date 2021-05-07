@@ -42,6 +42,11 @@ public class Main {
                 }
                 case 4 -> System.out.println(stack.trueEmpty());
                 case 5 -> stack.print();
+                case 6 -> {
+                    System.out.println("Wert eingeben");
+                    int number = Integer.parseInt(in.readLine());
+                    System.out.println(stack.pop(number));
+                }
                 case 0 -> System.out.println("Exiting program...");
                 default -> System.out.println("input was trash");
             }

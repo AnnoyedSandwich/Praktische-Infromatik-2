@@ -22,7 +22,7 @@ public class Main {
                 case 1 -> {
                     System.out.println("pls enter m:");
                     int m = Integer.parseInt(in.readLine());
-                    System.out.println(bitmap.add(m));
+                    System.out.println(bitmap.add(m-1));
                 }
                 case 2 -> {
                     System.out.println(bitmap.size());

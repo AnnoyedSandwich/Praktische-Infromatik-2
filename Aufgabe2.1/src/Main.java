@@ -24,10 +24,8 @@ public class Main {
                     int m = Integer.parseInt(in.readLine());
                     System.out.println(bitmap.add(m-1));
                 }
-                case 2 -> {
-                    System.out.println(bitmap.size());
-                }
-                case 3 -> {bitmap.print();}
+                case 2 -> System.out.println(bitmap.size());
+                case 3 -> bitmap.print();
                 case 0 -> System.out.println("Exiting program...");
                 default -> System.out.println("input was trash");
             }

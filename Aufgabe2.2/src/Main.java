@@ -8,7 +8,7 @@ public class Main {
     {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("pls enter stack size");
+        //System.out.println("pls enter stack size");
         int arraySize = 10;
         //arraySize = Integer.parseInt(in.readLine());
 
@@ -25,10 +25,8 @@ public class Main {
                     int m = Integer.parseInt(in.readLine());
                     System.out.println(bitmap.add(m));
                 }
-                case 2 -> {
-                    System.out.println(bitmap.size());
-                }
-                case 3 -> {bitmap.print();}
+                case 2 -> System.out.println(bitmap.size());
+                case 3 -> bitmap.print();
                 case 4 -> {
                     System.out.println("enter bottom and top values");
                     int bottom = Integer.parseInt(in.readLine());

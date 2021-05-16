@@ -14,6 +14,7 @@ public class Main {
 
         Bitmap bitmap = new Bitmap(arraySize);
 
+        //gleich wie 1.1
         int input;
         do {
             System.out.println("Enter action: 1-add|2-size|3-print|0-exit");

@@ -14,7 +14,7 @@ public class Main {
 
         ExtendedBitmap bitmap = new ExtendedBitmap(10, 3);
 
-
+        //gleich wie 1.1/1.2
         int input;
         do {
             System.out.println("Enter action: 1-add|4-extendedPush|2-size|3-print|0-exit");

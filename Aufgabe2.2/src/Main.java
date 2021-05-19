@@ -29,7 +29,9 @@ public class Main {
                 case 3 -> bitmap.print();
                 case 4 -> {
                     System.out.println("enter bottom and top values");
+                    System.out.println("bottom");
                     int bottom = Integer.parseInt(in.readLine());
+                    System.out.println("top");
                     int top = Integer.parseInt(in.readLine());
                     System.out.println(bitmap.add(bottom, top));
                 }

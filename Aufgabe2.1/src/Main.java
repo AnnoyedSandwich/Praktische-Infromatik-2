@@ -8,7 +8,7 @@ public class Main {
     {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("pls enter stack size");
+        System.out.println("pls enter Bitmap size");
         int arraySize;
         arraySize = Integer.parseInt(in.readLine());
 
@@ -30,6 +30,6 @@ public class Main {
                 case 0 -> System.out.println("Exiting program...");
                 default -> System.out.println("input was trash");
             }
-        } while (!(input==0));
+        } while ((input!=0));
     }
 }

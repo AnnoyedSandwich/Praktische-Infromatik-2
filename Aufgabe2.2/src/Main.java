@@ -17,7 +17,7 @@ public class Main {
         //gleich wie 1.1/1.2
         int input;
         do {
-            System.out.println("Enter action: 1-add|4-extendedPush|2-size|3-print|0-exit");
+            System.out.println("Enter action: 1-add|2-size|3-print|4-extendedAdd|0-exit");
             input = Integer.parseInt(in.readLine());
             switch (input) {
                 case 1 -> {

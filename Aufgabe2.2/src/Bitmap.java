@@ -49,8 +49,8 @@ class ExtendedBitmap extends Bitmap {
 
     //einträge machen ziwschen 2 werten
     //mehthode rangeCheck um zu testen op top zwischen 0 und der länge des arrays ist; und ob bottom zwischen 0 und top ist
-        //regex ist hier iwie was übertrieben aber war ne nette übung, stattdessen kann man auch if(bottom >= a.length || top >=a.length || bottom < 0 || top > bottom) return -1 nehmen
-    //wenn check erfolgreich dann via for loop von bottom+1 bis top jeden wert auf 1 setzen (siehe add methode)
+        //regex ist hier iwie sehr übertrieben, stattdessen kann man auch if(bottom >= a.length || top >=a.length || bottom < 0 || top > bottom) return -1 nehmen
+        //wenn check erfolgreich dann via for loop von bottom+1 bis top jeden wert auf 1 setzen (siehe add methode)
     public int add(int bottom, int top) {
         if (rangeCheck(bottom, top)) return -1;
         for (int e = bottom+1; e < top; e++) {

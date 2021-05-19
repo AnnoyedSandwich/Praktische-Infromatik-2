@@ -10,7 +10,7 @@ public class Bitmap {
     }
 
 
-    //wenn der index and dem hinzugefügt werden soll größer ist als die Bitmap return -1
+    //wenn der index an dem hinzugefügt werden soll größer ist als die größe der Bitmap return -1
     //sonst array an stelle m gleich 1 setzen
     public int add(int m) {
         if (m >= a.length) return -1;

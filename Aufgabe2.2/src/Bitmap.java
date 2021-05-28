@@ -17,6 +17,15 @@ public class Bitmap {
         return 0;
     }
 
+    public int remove(int m) {
+        if (m >= a.length) return -1;
+        if (a[m]==1) {
+            a[m]=0;
+            return 1;
+        }
+        return 0;
+    }
+
     public int size() {
         int counter = 0;
         for (int j : a) {
@@ -59,7 +68,13 @@ class ExtendedBitmap extends Bitmap {
         return 0;
     }
 
-
+    public int exists(int x) {
+        if (remove(x) == 1) {
+            add(x);
+            return 1;
+        }
+        return 0;
+    }
 
     //variable zu String und dann testen ob sie im Intervall liegt
     public boolean rangeCheck(int bottom, int top) {

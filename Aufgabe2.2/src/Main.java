@@ -12,12 +12,12 @@ public class Main {
         int arraySize = 10;
         //arraySize = Integer.parseInt(in.readLine());
 
-        ExtendedBitmap bitmap = new ExtendedBitmap(10, 3);
+        ExtendedBitmap bitmap = new ExtendedBitmap(arraySize, 3);
 
         //gleich wie 1.1/1.2
         int input;
         do {
-            System.out.println("Enter action: 1-add|2-size|3-print|4-extendedAdd|0-exit");
+            System.out.println("Enter action: 1-add|2-size|3-print|4-extendedAdd|5-isEmpty|0-exit");
             input = Integer.parseInt(in.readLine());
             switch (input) {
                 case 1 -> {
@@ -35,6 +35,7 @@ public class Main {
                     int top = Integer.parseInt(in.readLine());
                     System.out.println(bitmap.add(bottom, top));
                 }
+                case 5 -> System.out.println(bitmap.isEmpty());
                 case 0 -> System.out.println("Exiting program...");
                 default -> System.out.println("input was trash");
             }

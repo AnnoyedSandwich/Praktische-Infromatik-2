@@ -12,7 +12,8 @@ public class Main {
         int arraySize = Integer.parseInt(in.readLine());
 
 
-
+        //je nach dem welcher typ main methode mit isTrue=true oder false aufrufen
+        //if true dann ist user inoput int sonst double
         String typ;
         System.out.println("welcher Typ");
         System.out.println("für Integer - i; für Double - d");
@@ -37,10 +38,12 @@ public class Main {
 
 
     }
+    @SuppressWarnings("unchecked")
     private static<E extends Number> void mainMenu(ArrayGList<E>list, boolean isInt) throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         int input;
         do {
+
             System.out.println("Enter Action: 1-getLenght; 2-insertLast; 3-getFirst; 4-deleteFirst; 5-search; 6-print; 0-exit");
             input = Integer.parseInt(in.readLine());
             switch (input) {
@@ -53,6 +56,7 @@ public class Main {
                     } else {
                         value = Double.parseDouble(in.readLine());
                     }
+                    //was wäre eine bessere lösung? unchecked casts sind weniger nice
                     System.out.println(list.insertLast((E) value));
                 }
                 case 3 -> System.out.println(list.getFirst());

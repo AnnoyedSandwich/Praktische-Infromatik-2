@@ -1,4 +1,7 @@
 
+//kommentare sind in 3.2
+
+import java.util.Arrays;
 
 interface IntegerList {
     int getLength();
@@ -44,10 +47,5 @@ public class ArrayIntegerList implements IntegerList {
         return false;
     }
 
-    public void print() {
-        for (int i = 0; i < listSize; i++) {
-            System.out.print(a[i] + ", ");
-        }
-        System.out.println();
-    }
+    public void print() { System.out.println(Arrays.toString(a));}
 }

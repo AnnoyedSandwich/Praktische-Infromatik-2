@@ -17,7 +17,12 @@ public class ArrayGList<T> implements GList<T> {
     public ArrayGList(int arraySize) {
         a = (T[]) new Object[arraySize];
         listSize = 0;
+
     }
+
+    /*public Class getGenericType() {
+        return type.getClass();
+    }*/
 
     public int getLength() {
         return listSize;
@@ -28,6 +33,8 @@ public class ArrayGList<T> implements GList<T> {
         if (listSize >= a.length) return -1;
         a[listSize] = value;
         listSize++;
+        System.out.println(value.getClass().getSimpleName());
+        System.out.println(a.getClass().getSimpleName());
         return 0;
     }
 
@@ -51,3 +58,5 @@ public class ArrayGList<T> implements GList<T> {
 
     public void print() { System.out.println(Arrays.toString(a));}
 }
+
+

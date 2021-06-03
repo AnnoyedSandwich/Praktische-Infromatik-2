@@ -50,11 +50,10 @@ public class Main {
                     Object value;
                     if (isInt) {
                         value = Integer.parseInt(in.readLine());
-                        System.out.println(list.insertLast((E) value));
                     } else {
                         value = Double.parseDouble(in.readLine());
-                        System.out.println(list.insertLast((E) value));
                     }
+                    System.out.println(list.insertLast((E) value));
                 }
                 case 3 -> System.out.println(list.getFirst());
                 case 4 -> System.out.println(list.deleteFirst());

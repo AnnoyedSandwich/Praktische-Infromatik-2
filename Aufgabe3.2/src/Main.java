@@ -14,7 +14,7 @@ public class Main {
         String typ;
         System.out.println("welcher Typ");
         System.out.println("für Integer - i; für Double - d");
-        ArrayGList<Integer> list = new ArrayGList<>(arraySize);
+        ArrayGList<String> list = new ArrayGList<>(arraySize);
         //von hier ->
         do {
             typ = in.readLine();
@@ -24,7 +24,7 @@ public class Main {
         // liste und typ übergeben, je nach dem was typ ist wird halt entweder nen Integer oder nen Double geparsed
     }
     @SuppressWarnings("unchecked")
-    private static<T extends Number> void mainMenu(ArrayGList<T>list, String typ)
+    private static<T> void mainMenu(ArrayGList<T>list, String typ)
             throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         int input;

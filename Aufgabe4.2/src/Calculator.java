@@ -19,7 +19,6 @@ public class Calculator implements ActionListener{
         minusButton = new JButton("-");
         plusButton.addActionListener(this);
         minusButton.addActionListener(this);
-        //bounds
         panel.add(input1);panel.add(input2);panel.add(output);panel.add(plusButton);panel.add(minusButton);
         frame.add(panel);
         frame.setSize(300,300);

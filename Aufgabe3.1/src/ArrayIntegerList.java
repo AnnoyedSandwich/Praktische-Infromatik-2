@@ -37,6 +37,7 @@ public class ArrayIntegerList implements IntegerList {
     }
 
     public int deleteFirst() {
+        //array copy von a[1] zu a[0] und dann den höchsten wert auf 0 setzen
         if (listSize == 0) return -1;
         System.arraycopy(a, 1, a, 0, --listSize);
         a[listSize++] = 0;

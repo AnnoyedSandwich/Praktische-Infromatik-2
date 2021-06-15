@@ -32,8 +32,7 @@ public class ArrayGList<T> implements GList<T> {
         if (listSize >= a.length) return -1;
         a[listSize] = value;
         listSize++;
-        System.out.println("values class ist: "+value.getClass().getSimpleName());
-        System.out.println("a's class ist "+a.getClass().getSimpleName());
+
         return 0;
     }
 
@@ -42,7 +41,7 @@ public class ArrayGList<T> implements GList<T> {
         return a[0];
     }
 
-    //array wird um eine stelle nach vorne kopiert - pos1 wird zu pos0, pos2 zu pos1 etc das ganze wird listsize-1 mal gemacht
+    //
     public int deleteFirst() {
         if (listSize == 0) return -1;
         tmp = Arrays.copyOfRange(a, 1, a.length+1);
@@ -53,7 +52,7 @@ public class ArrayGList<T> implements GList<T> {
 
     //durch array loopen und wenn gefunden true returnen
     public boolean search(T value) {
-        for (int i = 0; i < listSize; i++) {if (a[i] == value) return true;}
+        for (int i = 0; i < listSize; i++) {if (a[i].equals(value))return true;}
         return false;
     }
 

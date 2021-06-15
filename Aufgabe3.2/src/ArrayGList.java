@@ -19,7 +19,6 @@ public class ArrayGList<T> implements GList<T> {
         a = (T[]) new Object[arraySize];
         tmp = (T[]) new Object[arraySize];
         listSize = 0;
-
     }
 
     //gibt listSize zurück
@@ -32,7 +31,6 @@ public class ArrayGList<T> implements GList<T> {
         if (listSize >= a.length) return -1;
         a[listSize] = value;
         listSize++;
-
         return 0;
     }
 
@@ -50,7 +48,7 @@ public class ArrayGList<T> implements GList<T> {
         return 0;
     }
 
-    //durch array loopen und wenn gefunden true returnen
+    //durch array loopen und wenn gefunden true returnen. MIt Object#equals weil mit == keine doubles verglichen werden können.
     public boolean search(T value) {
         for (int i = 0; i < listSize; i++) {if (a[i].equals(value))return true;}
         return false;

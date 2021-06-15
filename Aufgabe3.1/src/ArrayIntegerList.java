@@ -13,6 +13,7 @@ interface IntegerList {
 }
 
 public class ArrayIntegerList implements IntegerList {
+    @SuppressWarnings("FieldMayBeFinal")
     private int [] a;
     private int listSize;
 

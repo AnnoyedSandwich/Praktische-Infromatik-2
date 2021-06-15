@@ -13,9 +13,11 @@ interface GList<T> {
 public class ArrayGList<T> implements GList<T> {
     private T[] a ;
     private int listSize;
+    private T[] tmp;
 
     public ArrayGList(int arraySize) {
         a = (T[]) new Object[arraySize];
+        tmp = (T[]) new Object[arraySize];
         listSize = 0;
 
     }
@@ -43,7 +45,9 @@ public class ArrayGList<T> implements GList<T> {
     //array wird um eine stelle nach vorne kopiert - pos1 wird zu pos0, pos2 zu pos1 etc das ganze wird listsize-1 mal gemacht
     public int deleteFirst() {
         if (listSize == 0) return -1;
-        System.arraycopy(a, 1, a, 0, --listSize);
+        tmp = Arrays.copyOfRange(a, 1, a.length+1);
+        a = tmp;
+        listSize --;
         return 0;
     }
 

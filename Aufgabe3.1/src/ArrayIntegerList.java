@@ -39,6 +39,7 @@ public class ArrayIntegerList implements IntegerList {
     public int deleteFirst() {
         if (listSize == 0) return -1;
         System.arraycopy(a, 1, a, 0, --listSize);
+        a[listSize++] = 0;
         return 0;
     }
 
